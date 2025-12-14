@@ -1,0 +1,1078 @@
+/* RTL Support Styles */
+
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Hamburger Menu RTL - Move to Right Side */
+[dir="rtl"] .humberger__open {
+    left: auto;
+    right: 0;
+    text-align: right;
+}
+
+[dir="rtl"] .header__logo {
+    text-align: right;
+}
+
+[dir="rtl"] .header__menu {
+    text-align: right;
+}
+
+/* Owl Carousel RTL */
+[dir="rtl"] .owl-carousel {
+    direction: rtl;
+}
+
+[dir="rtl"] .owl-nav {
+    direction: rtl;
+}
+
+[dir="rtl"] .owl-prev {
+    right: -30px;
+    left: auto;
+}
+
+[dir="rtl"] .owl-next {
+    left: -30px;
+    right: auto;
+}
+
+/* Bootstrap Grid RTL Fix */
+[dir="rtl"] .row {
+    direction: rtl;
+}
+
+[dir="rtl"] [class*="col-"] {
+    float: right;
+}
+
+/* Text Alignment */
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left !important;
+}
+
+/* Margins and Paddings */
+[dir="rtl"] .ml-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .mr-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+[dir="rtl"] .pl-0 {
+    padding-right: 0 !important;
+    padding-left: inherit !important;
+}
+
+[dir="rtl"] .pr-0 {
+    padding-left: 0 !important;
+    padding-right: inherit !important;
+}
+
+/* Header RTL */
+[dir="rtl"] .header__top__right {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+[dir="rtl"] .header__top__right > * {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+[dir="rtl"] .header__top {
+    clear: both;
+    overflow: hidden;
+}
+
+[dir="rtl"] .header__top .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+[dir="rtl"] .header__top__left {
+    text-align: right;
+}
+
+[dir="rtl"] .header__top__left ul {
+    direction: rtl;
+}
+
+[dir="rtl"] .header__top__left ul li {
+    margin-right: 0;
+    margin-left: 45px;
+}
+
+[dir="rtl"] .header__top__left ul li:last-child {
+    margin-left: 0;
+}
+
+/* Header Top Left ::after Pseudo-element RTL */
+[dir="rtl"] .header__top__left ul li:after {
+    right: auto;
+    left: -25px;
+}
+
+[dir="rtl"] .header__menu ul {
+    direction: rtl;
+}
+
+/* Sidebar RTL */
+[dir="rtl"] .hero__categories ul {
+    text-align: right;
+}
+
+/* Product Items RTL */
+/* [dir="rtl"] .featured__item__text {
+    text-align: right;
+} */
+
+[dir="rtl"] .product__item__text {
+    text-align: right;
+}
+
+/* Forms RTL */
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select {
+    text-align: right;
+}
+
+[dir="rtl"] .form-control {
+    text-align: right;
+}
+
+/* Buttons RTL */
+[dir="rtl"] .btn {
+    direction: rtl;
+}
+
+/* Navigation RTL */
+[dir="rtl"] .header__menu ul li {
+    float: right;
+}
+
+/* Footer RTL */
+[dir="rtl"] .footer {
+    text-align: right;
+}
+
+[dir="rtl"] .footer ul {
+    text-align: right;
+}
+
+/* Breadcrumb RTL */
+[dir="rtl"] .breadcrumb__option {
+    direction: rtl;
+}
+
+[dir="rtl"] .breadcrumb__option a {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+/* Cart and Icons RTL */
+[dir="rtl"] .header__cart {
+    text-align: left;
+}
+
+/* Dropdowns RTL */
+[dir="rtl"] .header__menu__dropdown {
+    right: auto;
+    left: 0;
+    text-align: right;
+}
+
+/* Icons RTL - Font Awesome Icons Spacing */
+[dir="rtl"] .fa-envelope,
+[dir="rtl"] .fa-phone,
+[dir="rtl"] .fa-user,
+[dir="rtl"] .fa-heart,
+[dir="rtl"] .fa-shopping-bag,
+[dir="rtl"] .fa-shopping-cart,
+[dir="rtl"] .fa-bars {
+    /* margin-left: 8px; */
+    margin-right: 0;
+}
+
+[dir="rtl"] li .fa-envelope,
+[dir="rtl"] li .fa-phone,
+[dir="rtl"] li .fa-user {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+/* Arrow Icons RTL - Elegant Icons */
+[dir="rtl"] .arrow_carrot-down {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .arrow_carrot-down::before {
+    transform: rotate(180deg);
+}
+
+/* Nice Select Dropdown Arrow RTL */
+[dir="rtl"] .nice-select {
+    float: right;
+    text-align: right !important;
+    padding-left: 30px;
+    padding-right: 18px;
+}
+
+[dir="rtl"] .nice-select:after {
+    left: 12px;
+    right: auto;
+    transform: rotate(-135deg);
+}
+
+[dir="rtl"] .nice-select.open:after {
+    transform: rotate(45deg);
+}
+
+/* Header Top Icons RTL */
+[dir="rtl"] .header__top__left ul li i {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+[dir="rtl"] .header__top__right__auth {
+    position: relative;
+    z-index: 10;
+}
+
+[dir="rtl"] .header__top__right__auth a {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+[dir="rtl"] .header__top__right__auth a i {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
+[dir="rtl"] .humberger__menu__contact ul li i {
+    margin-left: 8px;
+    margin-right: 0;
+}
+
+/* Hero Search Phone Icon RTL */
+[dir="rtl"] .hero__search__phone__icon {
+    margin-left: 30px;
+    margin-right: 12px;
+}
+
+/* ============================================
+   ADDITIONAL RTL FIXES - ::after and ::before
+   ============================================ */
+
+/* Section Title RTL */
+[dir="rtl"] .section-title {
+    text-align: center;
+}
+
+[dir="rtl"] .section-title h2 {
+    text-align: center;
+}
+
+[dir="rtl"] .section-title h2:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    height: 4px;
+    width: 80px;
+    background: #1283ED;
+    content: "";
+    margin: 0 auto;
+}
+
+/* Header Top Right Social ::after RTL */
+[dir="rtl"] .header__top__right__social:after {
+    right: auto;
+    left: -20px;
+}
+
+/* Header Top Right Language ::after RTL */
+[dir="rtl"] .header__top__right__language:after {
+    right: auto;
+    left: -21px;
+}
+
+/* Hero Categories All ::after RTL */
+[dir="rtl"] .hero__categories__all:after {
+    right: auto;
+    left: 18px;
+}
+
+/* Hero Search Categories ::after RTL */
+[dir="rtl"] .hero__search__form form .hero__search__categories:after {
+    right: auto;
+    left: 0;
+}
+
+/* Hero Search Categories Span RTL */
+[dir="rtl"] .hero__search__form form .hero__search__categories span {
+    right: auto;
+    left: 14px;
+}
+
+/* Featured Controls ::after RTL */
+[dir="rtl"] .featured__controls ul li:after {
+    left: auto;
+    right: 0;
+}
+
+/* Breadcrumb Option ::after RTL */
+[dir="rtl"] .breadcrumb__option a:after {
+    right: auto;
+    left: -12px;
+}
+
+/* Price Range Input ::after RTL */
+[dir="rtl"] .price-range-wrap .range-slider .price-input:after {
+    left: auto;
+    right: 38px;
+}
+
+/* Sidebar Item Color Labels RTL */
+[dir="rtl"] .sidebar__item__color label {
+    padding-left: 0;
+    padding-right: 32px;
+}
+
+[dir="rtl"] .sidebar__item__color label:after {
+    left: auto;
+    right: 0;
+}
+
+/* Product Discount Title ::after RTL */
+[dir="rtl"] .product__discount__title h2:after {
+    left: auto;
+    right: 0;
+    margin: 0;
+}
+
+/* Filter Sort Nice Select ::after RTL */
+[dir="rtl"] .filter__sort .nice-select:after {
+    right: auto;
+    left: 16px;
+}
+
+/* Filter Item RTL */
+[dir="rtl"] .filter__item {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .filter__item .row {
+    direction: rtl;
+}
+
+[dir="rtl"] .filter__item [class*="col-"] {
+    direction: rtl;
+}
+
+[dir="rtl"] .filter__sort {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    gap: 15px;
+}
+
+[dir="rtl"] .filter__sort span {
+    margin-right: 0;
+    margin-left: 0;
+    order: 2;
+    white-space: nowrap;
+}
+
+[dir="rtl"] .filter__sort select,
+[dir="rtl"] .filter__sort .nice-select {
+    order: 1;
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .filter__sort .nice-select {
+    padding-right: 0;
+    padding-left: 28px;
+}
+
+[dir="rtl"] .filter__sort .nice-select .current {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .filter__sort .nice-select .list {
+    right: auto;
+    left: 0;
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .filter__sort .nice-select .option {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .filter__found {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .filter__found h6 {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .filter__found h6 span {
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+/* Sidebar RTL */
+[dir="rtl"] .sidebar {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .sidebar__item {
+    text-align: right;
+}
+
+[dir="rtl"] .sidebar__item h4 {
+    text-align: right;
+}
+
+[dir="rtl"] .sidebar__item ul {
+    text-align: right;
+    padding-right: 0;
+    padding-left: 20px;
+}
+
+[dir="rtl"] .sidebar__item ul li {
+    text-align: right;
+}
+
+[dir="rtl"] .sidebar__item ul li a {
+    text-align: right;
+}
+
+/* Featured Star RTL */
+[dir="rtl"] .product__item__pic .label.featured-star,
+[dir="rtl"] .featured__item__pic .label.featured-star {
+    right: auto;
+    left: 15px;
+}
+
+[dir="rtl"] .product__item__pic .label.label-danger {
+    right: auto;
+    left: 15px;
+}
+
+[dir="rtl"] .product__item__pic .label.featured-star + .label.label-danger {
+    left: 15px;
+    right: auto;
+    top: 60px;
+}
+
+/* Product Details Tab ::before and ::after RTL */
+[dir="rtl"] .product__details__tab .nav-tabs:before {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .product__details__tab .nav-tabs:after {
+    right: auto;
+    left: 0;
+}
+
+/* Checkout Input Checkbox RTL */
+[dir="rtl"] .checkout__input__checkbox label {
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+[dir="rtl"] .checkout__input__checkbox label .checkmark {
+    left: auto;
+    right: 0;
+}
+
+[dir="rtl"] .checkout__input__checkbox label .checkmark:after {
+    left: auto;
+    right: 1px;
+    transform: rotate(-127deg);
+}
+
+/* Blog Pagination ::before RTL */
+[dir="rtl"] .blog__pagination:before {
+    left: auto;
+    right: 0;
+}
+
+/* Blog Details Hero Text ::after RTL */
+[dir="rtl"] .blog__details__hero__text ul li:after {
+    right: auto;
+    left: -26px;
+}
+
+/* ============================================
+   ADDITIONAL RTL FIXES - Margins, Paddings, Floats
+   ============================================ */
+
+/* Header Menu Items Margins RTL */
+[dir="rtl"] .header__menu ul li {
+    margin-right: 0;
+    margin-left: 50px;
+}
+
+[dir="rtl"] .header__menu ul li:last-child {
+    margin-left: 0;
+}
+
+/* Header Cart Items RTL */
+[dir="rtl"] .header__cart ul {
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+[dir="rtl"] .header__cart ul li {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+[dir="rtl"] .header__cart ul li a span {
+    right: auto;
+    left: -12px;
+}
+
+/* Hero Search Form RTL */
+[dir="rtl"] .hero__search__form {
+    float: right;
+}
+
+[dir="rtl"] .hero__search__form form .hero__search__categories {
+    float: right;
+    padding-left: 45px;
+    padding-right: 18px;
+}
+
+[dir="rtl"] .hero__search__form form input {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+[dir="rtl"] .hero__search__form form button {
+    right: auto;
+    left: 0;
+}
+
+/* Hero Search Phone RTL */
+[dir="rtl"] .hero__search__phone {
+    float: left;
+}
+[dir="rtl"]  .hero__search__phone__text {
+	overflow: hidden;
+}
+
+[dir="rtl"]  .hero__search__phone__text h5 {
+	color: #1c1c1c;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+[dir="rtl"]  .hero__search__phone__text span {
+	font-size: 14px;
+	color: #6f6f6f;
+}
+
+[dir="rtl"] .hero__search__phone__icon {
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+/* Hero Categories RTL */
+[dir="rtl"] .hero__categories__all {
+    padding-left: 65px;
+    padding-right: 40px;
+}
+
+[dir="rtl"] .hero__categories__all i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+[dir="rtl"] .hero__categories ul {
+    padding-left: 0;
+    padding-right: 40px;
+}
+
+/* Hero Item RTL */
+[dir="rtl"] .hero__item {
+    padding-left: 0;
+    padding-right: 75px;
+}
+
+/* Hero Text RTL */
+[dir="rtl"] .hero__text {
+    text-align: right;
+    margin-right: auto;
+}
+
+[dir="rtl"] .hero__text .primary-btn {
+    margin-top: 20px;
+}
+
+/* Featured Controls RTL */
+[dir="rtl"] .featured__controls ul li {
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+/* Latest Product Item RTL */
+[dir="rtl"] .latest-product__item__pic {
+    float: right;
+    margin-right: 0;
+    margin-left: 26px;
+}
+
+/* Product Item Pic Hover RTL */
+[dir="rtl"] .product__item__pic__hover li,
+[dir="rtl"] .featured__item__pic__hover li {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
+/* Product Details RTL */
+[dir="rtl"] .product__details__text {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__text h3 {
+    text-align: right;
+}
+
+[dir="rtl"] .product__details__text .product__details__price {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__text p {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__text .primary-btn {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
+[dir="rtl"] .product__details__text ul li {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__text ul li b {
+    text-align: right;
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .product__details__text ul li .share a {
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+[dir="rtl"] .product__details__quantity {
+    margin-right: 0;
+    margin-left: 6px;
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__quantity label {
+    text-align: right;
+    display: block;
+    margin-bottom: 8px;
+}
+
+[dir="rtl"] .product__details__quantity .form-control,
+[dir="rtl"] .product__details__quantity select {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__quantity .pro-qty {
+    direction: ltr; /* Keep quantity selector LTR for numbers */
+    text-align: center;
+}
+
+[dir="rtl"] .product__details__quantity .pro-qty .qtybtn {
+    border-left: 1px solid #ddd;
+    border-right: none;
+}
+
+[dir="rtl"] .product__details__quantity .pro-qty .dec.qtybtn {
+    border-right: 1px solid #ddd;
+    border-left: none;
+}
+
+[dir="rtl"] .product__details__tab {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__tab__desc {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__tab__desc h6 {
+    text-align: right;
+}
+
+[dir="rtl"] .product__details__tab__desc p {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__button {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .product__details__pic {
+    text-align: right;
+}
+
+/* Product Details Tab RTL */
+[dir="rtl"] .product__details__tab .nav-tabs li {
+    margin-right: 0;
+    margin-left: 65px;
+}
+
+/* Shopping Cart Table RTL */
+[dir="rtl"] .shoping__cart__table table thead th.shoping__product {
+    text-align: right;
+}
+
+[dir="rtl"] .shoping__cart__table table tbody tr td.shoping__cart__item {
+    text-align: right;
+}
+
+[dir="rtl"] .shoping__cart__table table tbody tr td.shoping__cart__item img {
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+[dir="rtl"] .shoping__cart__table table tbody tr td.shoping__cart__item__close {
+    text-align: left;
+}
+
+/* Shopping Discount RTL */
+[dir="rtl"] .shoping__discount form input {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* Shopping Checkout RTL */
+[dir="rtl"] .shoping__checkout ul li span {
+    float: left;
+}
+
+/* Checkout Order RTL */
+[dir="rtl"] .checkout__order .checkout__order__products span,
+[dir="rtl"] .checkout__order ul li span,
+[dir="rtl"] .checkout__order .checkout__order__subtotal span,
+[dir="rtl"] .checkout__order .checkout__order__total span,
+[dir="rtl"] .checkout__order .checkout__order__discount span {
+    float: left !important;
+    text-align: left;
+}
+
+/* Shopping Cart Total RTL - Right Corner */
+[dir="rtl"] .shoping__checkout ul li span {
+    float: left !important;
+    text-align: left;
+}
+
+[dir="rtl"] .shoping__checkout ul li {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Checkout Form RTL */
+[dir="rtl"] .checkout__form {
+    text-align: right;
+}
+
+[dir="rtl"] .checkout__form h4 {
+    text-align: right;
+}
+
+[dir="rtl"] .checkout__input {
+    text-align: right;
+}
+
+[dir="rtl"] .checkout__input p {
+    text-align: right;
+}
+
+[dir="rtl"] .checkout__input input {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .checkout__input input::placeholder {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .checkout__input__add {
+    margin-bottom: 10px;
+}
+
+[dir="rtl"] .checkout__form h6 {
+    text-align: right;
+}
+
+[dir="rtl"] .checkout__form h6 span {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+/* Blog Section RTL */
+[dir="rtl"] .from-blog {
+    text-align: right;
+}
+
+[dir="rtl"] .from-blog__title {
+    text-align: right;
+}
+
+
+
+[dir="rtl"] .blog__item {
+    text-align: right;
+}
+
+[dir="rtl"] .blog__item__text {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .blog__item__text h5 {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .blog__item__text h5 a {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .blog__item__text p {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .blog__item__text ul {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .blog__item__text ul li {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+[dir="rtl"] .blog__item__text ul li:last-child {
+    margin-left: 0;
+}
+
+[dir="rtl"] .blog__item__text .blog__btn {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .blog__item__text .blog__btn span {
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+/* Blog Sidebar Recent RTL */
+[dir="rtl"] .blog__sidebar__recent__item__pic {
+    float: right;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+/* Blog Sidebar Item Tags RTL */
+[dir="rtl"] .blog__sidebar__item__tags a {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
+/* Blog Details Hero Text RTL */
+[dir="rtl"] .blog__details__hero__text ul li {
+    margin-right: 0;
+    margin-left: 45px;
+}
+
+/* Blog Details Author RTL */
+[dir="rtl"] .blog__details__author__pic {
+    float: right;
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+/* Blog Details Widget RTL */
+[dir="rtl"] .blog__details__widget .blog__details__social a {
+    margin-right: 0;
+    margin-left: 24px;
+}
+
+/* Footer Widget RTL */
+[dir="rtl"] .footer__widget ul {
+    float: right;
+}
+
+[dir="rtl"] .footer__widget form button {
+    right: auto;
+    left: 0;
+}
+
+[dir="rtl"] .footer__widget .footer__widget__social a {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* Footer Copyright RTL */
+[dir="rtl"] .footer__copyright__text {
+    float: right;
+}
+
+[dir="rtl"] .footer__copyright__payment {
+    float: left;
+}
+
+/* Contact Widget RTL */
+[dir="rtl"] .contact__widget {
+    text-align: right;
+}
+
+/* Blog Sidebar Search RTL */
+[dir="rtl"] .blog__sidebar__search form input {
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+[dir="rtl"] .blog__sidebar__search form button {
+    right: auto;
+    left: 0;
+}
+
+/* Header Top Right Social Links RTL */
+[dir="rtl"] .header__top__right__social a {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+/* Header Top Right Language Elements RTL */
+[dir="rtl"] .header__top__right__language img {
+    margin-right: 0;
+    margin-left: 6px;
+}
+
+[dir="rtl"] .header__top__right__language div {
+    margin-right: 0;
+    margin-left: 4px;
+}
+
+[dir="rtl"] .header__top__right__language {
+    margin-right: 0;
+    margin-left: 40px;
+}
+
+/* Product Pagination RTL */
+[dir="rtl"] .product__pagination a,
+[dir="rtl"] .blog__pagination a {
+    margin-right: 0;
+    margin-left: 16px;
+}
+
+/* Categories Slider Navigation RTL */
+[dir="rtl"] .categories__slider.owl-carousel .owl-nav button {
+    left: auto;
+    right: -35px;
+}
+
+[dir="rtl"] .categories__slider.owl-carousel .owl-nav button.owl-next {
+    right: auto;
+    left: -35px;
+}
+
+/* Latest Product Slider Navigation RTL */
+[dir="rtl"] .latest-product__slider.owl-carousel .owl-nav {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] .latest-product__slider.owl-carousel .owl-nav button {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* Hamburger Menu Wrapper RTL */
+[dir="rtl"] .humberger__menu__wrapper {
+    left: auto;
+    right: -300px;
+}
+
+[dir="rtl"] .humberger__menu__wrapper.show__humberger__menu__wrapper {
+    left: auto;
+    right: 0;
+}
+
+/* SlickNav Mobile Menu RTL */
+[dir="rtl"] .slicknav_menu {
+    direction: rtl;
+}
+
+[dir="rtl"] .slicknav_nav {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .slicknav_nav li {
+    text-align: right;
+}
+
+[dir="rtl"] .slicknav_btn {
+    float: left;
+    margin-left: 0;
+    margin-right: 5px;
+}
+
