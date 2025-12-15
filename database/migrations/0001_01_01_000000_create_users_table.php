@@ -18,7 +18,7 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('role', ['user', 'admin'])->default('user');
-            $table->unsignedInteger('loyalty_points')->default(0);
+            $table->unsignedInteger('loyalty_points')->default(2000);
             $table->string('phone_number')->nullable();
             $table->string('address_line1')->nullable();
             $table->rememberToken();
