@@ -24,6 +24,7 @@ Route::get('/products', [FrontendProductController::class, 'index'])->name('fron
 Route::get('/products/{id}', [FrontendProductController::class, 'show'])->name('frontend.products.show');
 Route::get('/categories/{id}', [FrontendCategoryController::class, 'show'])->name('frontend.categories.show');
 Route::get('/contact', [ContactController::class, 'index'])->name('frontend.contact');
+Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
 Route::post('/language/switch', [LanguageController::class, 'switch'])->name('frontend.language.switch');
 
 // Cart routes
