@@ -863,6 +863,40 @@
     margin-right: 5px;
 }
 
+/* Contact Form RTL */
+[dir="rtl"] .contact {
+    direction: rtl;
+}
+
+[dir="rtl"] .contact__form {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .contact__form h4 {
+    text-align: center;
+}
+
+[dir="rtl"] .contact__form .checkout__input {
+    text-align: right;
+}
+
+[dir="rtl"] .contact__form .checkout__input p {
+    text-align: right;
+}
+
+[dir="rtl"] .contact__form .checkout__input input,
+[dir="rtl"] .contact__form .checkout__input textarea {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .contact__form .checkout__input input::placeholder,
+[dir="rtl"] .contact__form .checkout__input textarea::placeholder {
+    text-align: right;
+    direction: rtl;
+}
+
 /* Blog Section RTL */
 [dir="rtl"] .from-blog {
     text-align: right;
