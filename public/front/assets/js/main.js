@@ -1,10 +1,10 @@
 /*  ---------------------------------------------------
-    Template Name: Ogani
-    Description:  Ogani eCommerce  HTML Template
-    Author: Colorlib
-    Author URI: https://colorlib.com
+    Template Name: Health Care
+    Description:  Health Care eCommerce  HTML Template
+    Author: HealthCare
+    Author URI: https://HealthCare.com
     Version: 1.0
-    Created: Colorlib
+    Created: HealthCare
 ---------------------------------------------------------  */
 
 'use strict';
