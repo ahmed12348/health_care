@@ -5,7 +5,7 @@
             <img src="{{ asset('front/assets/img/Health Care Logo.png') }}" class="logo-icon" alt="logo icon">
         </div>
         <div>
-            <h4 class="logo-text">Onedash</h4>
+            <h4 class="logo-text"></h4>
         </div>
         <div class="toggle-icon ms-auto">
             <i class="bi bi-list"></i>
