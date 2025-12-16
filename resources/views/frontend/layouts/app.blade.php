@@ -132,7 +132,15 @@
             }
         }
         .auth-dropdown.show,
-        .auth-dropdown[style*="display: block"] {
+        .auth-dropdown[style*="display: block"],
+        .auth-dropdown[style*="display:block"] {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        /* Ensure dropdown is visible when shown */
+        .header__top__right__auth:hover .auth-dropdown.show,
+        .header__top__right__auth .auth-dropdown.show {
             display: block !important;
             visibility: visible !important;
             opacity: 1 !important;
@@ -297,26 +305,89 @@
         });
         
         // User dropdown menu toggle (only for logged-in users)
-        $(document).ready(function() {
-            // Only prevent default for dropdown toggle (when user is logged in)
-            $('.header__top__right__auth').on('click', 'a[href="#"]', function(e) {
+        // Use both document.ready and window.load to ensure it works on server
+        function initAuthDropdown() {
+            // Handle clicks on auth dropdown toggle
+            $('.auth-dropdown-toggle').off('click.auth-dropdown').on('click.auth-dropdown', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 var dropdown = $(this).next('.auth-dropdown');
-                $('.auth-dropdown').not(dropdown).hide().removeClass('show');
-                dropdown.toggle().addClass('show');
+                if (dropdown.length) {
+                    $('.auth-dropdown').not(dropdown).hide().removeClass('show');
+                    dropdown.toggle().addClass('show');
+                }
             });
             
-            // Allow normal link behavior for login link (when user is not logged in)
-            // Login link will work normally without preventDefault
+            // Also handle clicks on any link with href="#" inside auth wrapper
+            $('.auth-dropdown-wrapper a[href="#"]').off('click.auth-dropdown-alt').on('click.auth-dropdown-alt', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var dropdown = $(this).next('.auth-dropdown');
+                if (dropdown.length) {
+                    $('.auth-dropdown').not(dropdown).hide().removeClass('show');
+                    dropdown.toggle().addClass('show');
+                }
+            });
             
             // Close dropdown when clicking outside
-            $(document).on('click', function(e) {
-                if (!$(e.target).closest('.header__top__right__auth').length) {
+            $(document).off('click.auth-dropdown-close').on('click.auth-dropdown-close', function(e) {
+                if (!$(e.target).closest('.auth-dropdown-wrapper').length && !$(e.target).closest('.auth-dropdown').length) {
                     $('.auth-dropdown').hide().removeClass('show');
                 }
             });
-        });
+        }
+        
+        // Initialize on document ready
+        if (typeof jQuery !== 'undefined') {
+            $(document).ready(function() {
+                initAuthDropdown();
+            });
+            
+            // Also initialize on window load (fallback for server issues)
+            $(window).on('load', function() {
+                initAuthDropdown();
+            });
+            
+            // Fallback: Initialize after a short delay
+            setTimeout(function() {
+                initAuthDropdown();
+            }, 200);
+        } else {
+            // Fallback vanilla JavaScript if jQuery is not loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                var toggles = document.querySelectorAll('.auth-dropdown-toggle, .auth-dropdown-wrapper a[href="#"]');
+                toggles.forEach(function(toggle) {
+                    toggle.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        var dropdown = this.nextElementSibling;
+                        if (dropdown && dropdown.classList.contains('auth-dropdown')) {
+                            document.querySelectorAll('.auth-dropdown').forEach(function(d) {
+                                if (d !== dropdown) {
+                                    d.style.display = 'none';
+                                    d.classList.remove('show');
+                                }
+                            });
+                            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                            if (dropdown.style.display === 'block') {
+                                dropdown.classList.add('show');
+                            } else {
+                                dropdown.classList.remove('show');
+                            }
+                        }
+                    });
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!e.target.closest('.auth-dropdown-wrapper') && !e.target.closest('.auth-dropdown')) {
+                        document.querySelectorAll('.auth-dropdown').forEach(function(d) {
+                            d.style.display = 'none';
+                            d.classList.remove('show');
+                        });
+                    }
+                });
+            });
+        }
     </script>
 </body>
 

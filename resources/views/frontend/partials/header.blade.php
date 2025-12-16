@@ -69,8 +69,8 @@
         </div>
         <div class="header__top__right__auth">
             @auth
-                <div style="position: relative; display: inline-block;">
-                    <a href="#" style="cursor: pointer;"><i class="fa fa-user"></i> {{ auth()->user()->name }}</a>
+                <div style="position: relative; display: inline-block;" class="auth-dropdown-wrapper">
+                    <a href="#" style="cursor: pointer;" class="auth-dropdown-toggle"><i class="fa fa-user"></i> {{ auth()->user()->name }}</a>
                     <ul class="auth-dropdown">
                         <li style="border-bottom: 1px solid #eee;">
                             <span style="font-size: 12px; color: #666;">{{ auth()->user()->email }}</span>
@@ -187,8 +187,8 @@
                         </div>
                         <div class="header__top__right__auth">
                             @auth
-                                <div style="position: relative; display: inline-block;">
-                                    <a href="#" style="cursor: pointer;"><i class="fa fa-user"></i> {{ auth()->user()->name }}</a>
+                                <div style="position: relative; display: inline-block;" class="auth-dropdown-wrapper">
+                                    <a href="#" style="cursor: pointer;" class="auth-dropdown-toggle"><i class="fa fa-user"></i> {{ auth()->user()->name }}</a>
                                     <ul class="auth-dropdown">
                                         <li style="border-bottom: 1px solid #eee;">
                                             <span style="font-size: 12px; color: #666;">{{ auth()->user()->email }}</span>
