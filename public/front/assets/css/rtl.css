@@ -14,7 +14,10 @@
 }
 
 [dir="rtl"] .header__logo {
-    text-align: right;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 [dir="rtl"] .header__menu {
@@ -565,6 +568,7 @@
     right: auto;
     left: -12px;
 }
+
 
 /* Hero Search Form RTL */
 [dir="rtl"] .hero__search__form {
@@ -1282,6 +1286,24 @@
     [dir="rtl"] .humberger__menu__cart {
         display: none;
     }
+    /* Hide desktop header auth dropdown on mobile (only show in humberger menu) */
+    [dir="rtl"] .header .header__top .header__top__right__auth {
+        display: none !important;
+    }
+    /* Logo alignment on mobile */
+    [dir="rtl"] .header__logo {
+        text-align: center !important;
+        padding: 15px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    [dir="rtl"] .header__logo img {
+        max-width: 150px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        object-fit: contain !important;
+    }
     /* Hide header__cart on mobile */
     [dir="rtl"] .header__cart {
         display: none;
@@ -1313,9 +1335,14 @@
     }
     [dir="rtl"] .header__logo {
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     [dir="rtl"] .header__logo img {
         margin: 0 auto;
+        max-width: 180px;
+        object-fit: contain;
     }
     [dir="rtl"] .humberger__open {
         left: 15px;
@@ -1371,6 +1398,24 @@
     [dir="rtl"] .humberger__menu__cart {
         display: none;
     }
+    /* Hide desktop header auth dropdown on small mobile (only show in humberger menu) */
+    [dir="rtl"] .header .header__top .header__top__right__auth {
+        display: none !important;
+    }
+    /* Logo alignment on small mobile */
+    [dir="rtl"] .header__logo {
+        text-align: center !important;
+        padding: 12px 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    [dir="rtl"] .header__logo img {
+        max-width: 120px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        object-fit: contain !important;
+    }
     /* Hide header__cart on small mobile */
     [dir="rtl"] .header__cart {
         display: none;
@@ -1387,10 +1432,14 @@
     }
     [dir="rtl"] .header__logo {
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     [dir="rtl"] .header__logo img {
         max-width: 120px;
         margin: 0 auto;
+        object-fit: contain;
     }
     [dir="rtl"] .header__cart {
         left: 50px;

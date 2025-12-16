@@ -4,7 +4,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="footer__about">
                     <div class="footer__about__logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('front/assets/img/healthcare.png') }}" alt=""></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('front/assets/img/Health Care Logo.png') }}" alt=""></a>
                     </div>
                     <ul>
                         <li>{{ __t('address') }}: Sea St, next to Alex Bank</li>

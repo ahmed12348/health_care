@@ -108,10 +108,16 @@
         }
         /* Mobile dropdown menu styles */
         @media only screen and (max-width: 767px) {
+            /* Hide desktop header dropdown on mobile */
+            .header .header__top .header__top__right__auth {
+                display: none !important;
+            }
+            /* Show only humberger menu dropdown on mobile */
             .humberger__menu__wrapper .header__top__right__auth {
                 position: relative !important;
                 z-index: 1001 !important;
                 overflow: visible !important;
+                display: block !important;
             }
             .humberger__menu__wrapper .header__top__right__auth > div {
                 position: relative !important;

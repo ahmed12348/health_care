@@ -84,7 +84,7 @@ p {
 }
 
 img {
-	max-width: 100%;
+	max-width: 50%;
 }
 
 input:focus,
@@ -446,18 +446,23 @@ ol {
 }
 
 .header__logo {
-	padding: 15px 0;
+	padding: 24px 0;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .header__logo a {
 	display: inline-block;
+	line-height: 0;
 }
 
 .header__logo img {
-	max-width: 100%;
+	max-width: 120px;
 	height: auto;
 	display: block;
+	object-fit: contain;
 }
 
 .header__menu {
@@ -3344,6 +3349,10 @@ ol {
 	.header__cart {
 		display: none;
 	}
+	/* Hide desktop header auth dropdown on mobile (only show in humberger menu) */
+	.header .header__top .header__top__right__auth {
+		display: none !important;
+	}
 	/* Show hero__categories__all only in humberger menu */
 	.humberger__menu__categories .hero__categories__all {
 		background: #1283ED;
@@ -3694,6 +3703,10 @@ ol {
 	.humberger__menu__cart {
 		display: none;
 	}
+	/* Hide desktop header auth dropdown on small mobile (only show in humberger menu) */
+	.header .header__top .header__top__right__auth {
+		display: none !important;
+	}
 	/* Hide header__cart on small mobile */
 	.header__cart {
 		display: none;
@@ -3777,8 +3790,14 @@ ol {
 		line-height: 24px;
 		padding: 3px 0;
 	}
+	.header__logo {
+		padding: 24px 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 	.header__logo img {
-		max-width: 120px;
+		max-width: 150px;
 	}
 	.header__cart {
 		right: 50px;
@@ -3789,17 +3808,22 @@ ol {
 @media only screen and (max-width: 767px) {
 	.header__logo {
 		text-align: center !important;
-		padding: 10px 0 !important;
+		padding: 15px 0 !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
 	}
 	.header__logo a {
 		display: block;
 		text-align: center;
+		line-height: 0;
 	}
 	.header__logo img {
 		max-width: 150px !important;
 		height: auto !important;
 		margin: 0 auto !important;
 		display: block !important;
+		object-fit: contain !important;
 	}
 	.header__menu {
 		display: none !important;
@@ -3813,10 +3837,15 @@ ol {
 
 @media only screen and (max-width: 479px) {
 	.header__logo {
-		padding: 8px 0 !important;
+		padding: 12px 0 !important;
+		display: flex !important;
+		align-items: center !important;
+		justify-content: center !important;
 	}
 	.header__logo img {
-		max-width: 120px !important;
+		max-width: 130px !important;
+		height: auto !important;
+		object-fit: contain !important;
 	}
 	.header__cart {
 		right: 50px !important;
