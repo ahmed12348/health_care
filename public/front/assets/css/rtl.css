@@ -253,7 +253,7 @@
 
 [dir="rtl"] .header__top__right__auth {
     position: relative;
-    z-index: 10;
+    z-index: 1001;
 }
 
 [dir="rtl"] .header__top__right__auth a {
@@ -1083,6 +1083,8 @@
 [dir="rtl"] .humberger__menu__wrapper {
     left: auto;
     right: -300px;
+    direction: rtl;
+    text-align: right;
 }
 
 [dir="rtl"] .humberger__menu__wrapper.show__humberger__menu__wrapper {
@@ -1090,9 +1092,152 @@
     right: 0;
 }
 
+/* Humberger Menu Logo RTL */
+[dir="rtl"] .humberger__menu__logo {
+    text-align: center;
+}
+
+[dir="rtl"] .humberger__menu__logo a {
+    display: block;
+    text-align: center;
+}
+
+[dir="rtl"] .humberger__menu__logo img {
+    margin: 0 auto;
+    display: block;
+    max-width: 150px;
+    height: auto;
+}
+
+/* Humberger Menu Cart RTL */
+[dir="rtl"] .humberger__menu__cart ul {
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+[dir="rtl"] .humberger__menu__cart ul li {
+    margin-right: 0;
+    margin-left: 15px;
+}
+
+[dir="rtl"] .humberger__menu__cart ul li:last-child {
+    margin-left: 0;
+}
+
+[dir="rtl"] .humberger__menu__cart ul li a span {
+    right: auto;
+    left: -12px;
+}
+
+/* Humberger Menu Widget RTL */
+[dir="rtl"] .humberger__menu__widget {
+    text-align: right;
+}
+
+[dir="rtl"] .humberger__menu__widget .header__top__right__language {
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+/* Humberger Menu Contact RTL */
+[dir="rtl"] .humberger__menu__contact {
+    text-align: right;
+}
+
+[dir="rtl"] .humberger__menu__contact ul {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .humberger__menu__contact ul li {
+    text-align: right;
+}
+
+/* Humberger Menu Social RTL */
+[dir="rtl"] .humberger__menu__wrapper .header__top__right__social {
+    text-align: right;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+[dir="rtl"] .humberger__menu__wrapper .header__top__right__social a {
+    margin-right: 0;
+    margin-left: 0;
+    display: inline-block;
+    padding: 8px;
+    transition: all 0.3s;
+}
+
+[dir="rtl"] .humberger__menu__wrapper .header__top__right__social a:hover {
+    transform: scale(1.1);
+}
+
+/* Humberger Menu Categories RTL */
+[dir="rtl"] .humberger__menu__categories {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .humberger__menu__categories .hero__categories__all {
+    text-align: right;
+    padding: 12px 20px;
+}
+
+[dir="rtl"] .humberger__menu__categories .hero__categories__all i {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+[dir="rtl"] .humberger__menu__categories .hero__categories__all:after {
+    right: auto;
+    left: 18px;
+}
+
+[dir="rtl"] .humberger__menu__categories ul {
+    text-align: right;
+    direction: rtl;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+[dir="rtl"] .humberger__menu__categories ul li {
+    text-align: right;
+}
+
+[dir="rtl"] .humberger__menu__categories ul li a {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .humberger__menu__categories ul li a:hover {
+    padding-right: 0;
+    padding-left: 10px;
+}
+
+/* Humberger Menu Nav RTL */
+[dir="rtl"] .humberger__menu__nav {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .humberger__menu__nav ul {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .humberger__menu__nav ul li {
+    text-align: right;
+}
+
+[dir="rtl"] .humberger__menu__nav ul li a {
+    text-align: right;
+}
+
 /* SlickNav Mobile Menu RTL */
 [dir="rtl"] .slicknav_menu {
     direction: rtl;
+    text-align: right;
 }
 
 [dir="rtl"] .slicknav_nav {
@@ -1104,6 +1249,11 @@
     text-align: right;
 }
 
+[dir="rtl"] .slicknav_nav a {
+    text-align: right;
+    direction: rtl;
+}
+
 [dir="rtl"] .slicknav_btn {
     float: left;
     margin-left: 0;
@@ -1112,6 +1262,34 @@
 
 /* Mobile RTL Improvements */
 @media only screen and (max-width: 767px) {
+    /* Hide hero__categories in home page sidebar on mobile, only show in humberger menu */
+    [dir="rtl"] .hero__categories {
+        display: none;
+    }
+    /* Hide hero__categories__all in home page sidebar on mobile, only show in humberger menu */
+    [dir="rtl"] .hero__categories .hero__categories__all {
+        display: none;
+    }
+    /* Hide hero__search__phone on mobile */
+    [dir="rtl"] .hero__search__phone {
+        display: none;
+    }
+    /* Hide humberger__menu__categories on mobile */
+    [dir="rtl"] .humberger__menu__categories {
+        display: none;
+    }
+    /* Hide humberger__menu__cart on mobile */
+    [dir="rtl"] .humberger__menu__cart {
+        display: none;
+    }
+    /* Hide header__cart on mobile */
+    [dir="rtl"] .header__cart {
+        display: none;
+    }
+    /* Show hero__categories__all only in humberger menu */
+    [dir="rtl"] .humberger__menu__categories .hero__categories__all {
+        display: block;
+    }
     [dir="rtl"] .hero__search__phone {
         float: right;
     }
@@ -1133,14 +1311,114 @@
     [dir="rtl"] .blog__item__text {
         text-align: right;
     }
+    [dir="rtl"] .header__logo {
+        text-align: center;
+    }
+    [dir="rtl"] .header__logo img {
+        margin: 0 auto;
+    }
+    [dir="rtl"] .humberger__open {
+        left: 15px;
+        right: auto;
+    }
+    [dir="rtl"] .header__cart {
+        left: 60px;
+        right: auto;
+    }
+    [dir="rtl"] .humberger__menu__categories .hero__categories__all {
+        text-align: right;
+        padding: 10px 15px;
+    }
+    [dir="rtl"] .humberger__menu__categories .hero__categories__all i {
+        margin-right: 0;
+        margin-left: 8px;
+    }
+    [dir="rtl"] .humberger__menu__categories .hero__categories__all:after {
+        right: auto;
+        left: 18px;
+    }
+    [dir="rtl"] .humberger__menu__categories ul {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    [dir="rtl"] .humberger__menu__categories ul li a {
+        text-align: right;
+    }
+    [dir="rtl"] .humberger__menu__categories ul li a:hover {
+        padding-right: 0;
+        padding-left: 10px;
+    }
 }
 
 @media only screen and (max-width: 479px) {
+    /* Hide hero__categories in home page sidebar on small mobile, only show in humberger menu */
+    [dir="rtl"] .hero__categories {
+        display: none;
+    }
+    /* Hide hero__categories__all in home page sidebar on small mobile, only show in humberger menu */
+    [dir="rtl"] .hero__categories .hero__categories__all {
+        display: none;
+    }
+    /* Hide hero__search__phone on small mobile */
+    [dir="rtl"] .hero__search__phone {
+        display: none;
+    }
+    /* Hide humberger__menu__categories on small mobile */
+    [dir="rtl"] .humberger__menu__categories {
+        display: none;
+    }
+    /* Hide humberger__menu__cart on small mobile */
+    [dir="rtl"] .humberger__menu__cart {
+        display: none;
+    }
+    /* Hide header__cart on small mobile */
+    [dir="rtl"] .header__cart {
+        display: none;
+    }
+    /* Show hero__categories__all only in humberger menu */
+    [dir="rtl"] .humberger__menu__categories .hero__categories__all {
+        display: block;
+    }
     [dir="rtl"] .hero__text {
         text-align: center;
     }
     [dir="rtl"] .section-title {
         text-align: center;
+    }
+    [dir="rtl"] .header__logo {
+        text-align: center;
+    }
+    [dir="rtl"] .header__logo img {
+        max-width: 120px;
+        margin: 0 auto;
+    }
+    [dir="rtl"] .header__cart {
+        left: 50px;
+        right: auto;
+    }
+    [dir="rtl"] .humberger__menu__categories .hero__categories__all {
+        padding: 8px 12px;
+        text-align: right;
+    }
+    [dir="rtl"] .humberger__menu__categories .hero__categories__all i {
+        margin-right: 0;
+        margin-left: 6px;
+        font-size: 12px;
+    }
+    [dir="rtl"] .humberger__menu__categories .hero__categories__all span {
+        font-size: 13px;
+    }
+    [dir="rtl"] .humberger__menu__categories ul {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+    [dir="rtl"] .humberger__menu__categories ul li a {
+        font-size: 12px;
+        text-align: right;
+    }
+    [dir="rtl"] .humberger__menu__categories ul li a:hover {
+        padding-right: 0;
+        padding-left: 8px;
     }
 }
 

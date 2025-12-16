@@ -427,7 +427,7 @@ ol {
 .header__top__right__auth {
 	display: inline-block;
 	position: relative;
-	z-index: 10;
+	z-index: 1001;
 }
 
 .header__top__right__auth a {
@@ -447,10 +447,17 @@ ol {
 
 .header__logo {
 	padding: 15px 0;
+	text-align: center;
 }
 
 .header__logo a {
 	display: inline-block;
+}
+
+.header__logo img {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 .header__menu {
@@ -3112,9 +3119,17 @@ ol {
 	}
 	.humberger__menu__logo {
 		margin-bottom: 30px;
+		text-align: center;
 	}
 	.humberger__menu__logo a {
-		display: inline-block;
+		display: block;
+		text-align: center;
+	}
+	.humberger__menu__logo img {
+		max-width: 150px;
+		height: auto;
+		margin: 0 auto;
+		display: block;
 	}
 	.humberger__menu__contact {
 		padding: 10px 0 13px;
@@ -3182,13 +3197,57 @@ ol {
 	.humberger__menu__widget .header__top__right__language {
 		margin-right: 20px;
 	}
+	.humberger__menu__categories {
+		margin-bottom: 25px;
+	}
+	.humberger__menu__categories .hero__categories__all {
+		background: #1283ED;
+		padding: 12px 20px;
+		border-radius: 4px;
+		margin-bottom: 10px;
+	}
+	.humberger__menu__categories ul {
+		border: 1px solid #ebebeb;
+		padding: 10px 20px;
+		border-radius: 4px;
+		max-height: 200px;
+		overflow-y: auto;
+	}
+	.humberger__menu__categories ul li {
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	.humberger__menu__categories ul li a {
+		font-size: 14px;
+		color: #1c1c1c;
+		line-height: 32px;
+		display: block;
+		padding: 5px 0;
+		transition: all 0.3s;
+	}
+	.humberger__menu__categories ul li a:hover {
+		color: #1283ED;
+		padding-right: 10px;
+	}
 	.humberger__menu__nav {
 		display: none;
 	}
 	.humberger__menu__wrapper .header__top__right__social {
-		display: block;
+		display: flex;
+		gap: 15px;
+		align-items: center;
 		margin-right: 0;
 		margin-bottom: 20px;
+	}
+	.humberger__menu__wrapper .header__top__right__social a {
+		margin-right: 0;
+		margin-left: 0;
+		display: inline-block;
+		padding: 8px;
+		transition: all 0.3s;
+	}
+	.humberger__menu__wrapper .header__top__right__social a:hover {
+		transform: scale(1.1);
 	}
 	.humberger__menu__wrapper .slicknav_btn {
 		display: none;
@@ -3261,8 +3320,52 @@ ol {
 /* Wide Mobile = 480px */
 
 @media only screen and (max-width: 767px) {
+	/* Hide hero__categories in home page sidebar on mobile, only show in humberger menu */
 	.hero__categories {
-		margin-bottom: 30px;
+		display: none;
+	}
+	/* Hide hero__categories__all in home page sidebar on mobile, only show in humberger menu */
+	.hero__categories .hero__categories__all {
+		display: none;
+	}
+	/* Hide hero__search__phone on mobile */
+	.hero__search__phone {
+		display: none;
+	}
+	/* Hide humberger__menu__categories on mobile */
+	.humberger__menu__categories {
+		display: none;
+	}
+	/* Hide humberger__menu__cart on mobile */
+	.humberger__menu__cart {
+		display: none;
+	}
+	/* Hide header__cart on mobile */
+	.header__cart {
+		display: none;
+	}
+	/* Show hero__categories__all only in humberger menu */
+	.humberger__menu__categories .hero__categories__all {
+		background: #1283ED;
+		padding: 10px 15px;
+		border-radius: 4px;
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+	.humberger__menu__categories .hero__categories__all i {
+		font-size: 14px;
+		margin-right: 8px;
+	}
+	.humberger__menu__categories .hero__categories__all span {
+		font-size: 14px;
+	}
+	.humberger__menu__categories ul {
+		padding: 8px 15px;
+		max-height: 150px;
+	}
+	.humberger__menu__categories ul li a {
+		font-size: 13px;
+		line-height: 28px;
 	}
 	.hero__search {
 		margin-bottom: 30px;
@@ -3370,9 +3473,17 @@ ol {
 	}
 	.humberger__menu__logo {
 		margin-bottom: 30px;
+		text-align: center;
 	}
 	.humberger__menu__logo a {
-		display: inline-block;
+		display: block;
+		text-align: center;
+	}
+	.humberger__menu__logo img {
+		max-width: 150px;
+		height: auto;
+		margin: 0 auto;
+		display: block;
 	}
 	.humberger__menu__contact {
 		padding: 10px 0 13px;
@@ -3440,13 +3551,57 @@ ol {
 	.humberger__menu__widget .header__top__right__language {
 		margin-right: 20px;
 	}
+	.humberger__menu__categories {
+		margin-bottom: 25px;
+	}
+	.humberger__menu__categories .hero__categories__all {
+		background: #1283ED;
+		padding: 12px 20px;
+		border-radius: 4px;
+		margin-bottom: 10px;
+	}
+	.humberger__menu__categories ul {
+		border: 1px solid #ebebeb;
+		padding: 10px 20px;
+		border-radius: 4px;
+		max-height: 200px;
+		overflow-y: auto;
+	}
+	.humberger__menu__categories ul li {
+		list-style: none;
+		margin-bottom: 5px;
+	}
+	.humberger__menu__categories ul li a {
+		font-size: 14px;
+		color: #1c1c1c;
+		line-height: 32px;
+		display: block;
+		padding: 5px 0;
+		transition: all 0.3s;
+	}
+	.humberger__menu__categories ul li a:hover {
+		color: #1283ED;
+		padding-right: 10px;
+	}
 	.humberger__menu__nav {
 		display: none;
 	}
 	.humberger__menu__wrapper .header__top__right__social {
-		display: block;
+		display: flex;
+		gap: 15px;
+		align-items: center;
 		margin-right: 0;
 		margin-bottom: 20px;
+	}
+	.humberger__menu__wrapper .header__top__right__social a {
+		margin-right: 0;
+		margin-left: 0;
+		display: inline-block;
+		padding: 8px;
+		transition: all 0.3s;
+	}
+	.humberger__menu__wrapper .header__top__right__social a:hover {
+		transform: scale(1.1);
 	}
 	.humberger__menu__wrapper .slicknav_btn {
 		display: none;
@@ -3519,6 +3674,34 @@ ol {
 /* Small Device = 320px */
 
 @media only screen and (max-width: 479px) {
+	/* Hide hero__categories in home page sidebar on small mobile, only show in humberger menu */
+	.hero__categories {
+		display: none;
+	}
+	/* Hide hero__categories__all in home page sidebar on small mobile, only show in humberger menu */
+	.hero__categories .hero__categories__all {
+		display: none;
+	}
+	/* Hide hero__search__phone on small mobile */
+	.hero__search__phone {
+		display: none;
+	}
+	/* Hide humberger__menu__categories on small mobile */
+	.humberger__menu__categories {
+		display: none;
+	}
+	/* Hide humberger__menu__cart on small mobile */
+	.humberger__menu__cart {
+		display: none;
+	}
+	/* Hide header__cart on small mobile */
+	.header__cart {
+		display: none;
+	}
+	/* Show hero__categories__all only in humberger menu */
+	.humberger__menu__categories .hero__categories__all {
+		display: block;
+	}
 	.hero__search__form form .hero__search__categories {
 		display: none;
 	}
@@ -3562,6 +3745,81 @@ ol {
 	}
 	.blog__details__hero__text h2 {
 		font-size: 24px;
+	}
+	/* Hide hero__categories__all in home page sidebar on small mobile, only show in humberger menu */
+	.hero__categories .hero__categories__all {
+		display: none;
+	}
+	/* Show hero__categories__all only in humberger menu */
+	.humberger__menu__categories .hero__categories__all {
+		display: block;
+	}
+	.header__logo {
+		padding: 8px 0;
+	}
+	.humberger__menu__categories .hero__categories__all {
+		padding: 8px 12px;
+		font-size: 13px;
+	}
+	.humberger__menu__categories .hero__categories__all i {
+		font-size: 12px;
+		margin-right: 6px;
+	}
+	.humberger__menu__categories .hero__categories__all span {
+		font-size: 13px;
+	}
+	.humberger__menu__categories ul {
+		padding: 6px 12px;
+		max-height: 120px;
+	}
+	.humberger__menu__categories ul li a {
+		font-size: 12px;
+		line-height: 24px;
+		padding: 3px 0;
+	}
+	.header__logo img {
+		max-width: 120px;
+	}
+	.header__cart {
+		right: 50px;
+	}
+}
+
+/* Header Logo Responsive Fixes */
+@media only screen and (max-width: 767px) {
+	.header__logo {
+		text-align: center !important;
+		padding: 10px 0 !important;
+	}
+	.header__logo a {
+		display: block;
+		text-align: center;
+	}
+	.header__logo img {
+		max-width: 150px !important;
+		height: auto !important;
+		margin: 0 auto !important;
+		display: block !important;
+	}
+	.header__menu {
+		display: none !important;
+	}
+	.header__cart {
+		position: absolute !important;
+		right: 60px !important;
+		top: 22px !important;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.header__logo {
+		padding: 8px 0 !important;
+	}
+	.header__logo img {
+		max-width: 120px !important;
+	}
+	.header__cart {
+		right: 50px !important;
 	}
 }
 

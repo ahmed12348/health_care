@@ -65,31 +65,112 @@
         }
         
         /* User dropdown menu styles */
+        .header__top {
+            position: relative !important;
+            z-index: 1000 !important;
+            overflow: visible !important;
+        }
+        .header__top .container {
+            overflow: visible !important;
+        }
+        .header__top__right {
+            overflow: visible !important;
+        }
         .header__top__right__auth {
-            position: relative;
+            position: relative !important;
+            z-index: 1001 !important;
+            overflow: visible !important;
+        }
+        .header__top__right__auth > div {
+            position: relative !important;
+            z-index: 1001 !important;
+            overflow: visible !important;
         }
         .auth-dropdown {
-            list-style: none;
-            margin: 0;
-            padding: 0;
+            list-style: none !important;
+            margin: 0 !important;
+            padding: 10px 0 !important;
+            position: absolute !important;
+            top: 100% !important;
+            right: 0 !important;
+            background: white !important;
+            border: 1px solid #ddd !important;
+            border-radius: 4px !important;
+            margin-top: 5px !important;
+            min-width: 200px !important;
+            width: auto !important;
+            white-space: nowrap !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+            z-index: 10000 !important;
+            display: none !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        /* Mobile dropdown menu styles */
+        @media only screen and (max-width: 767px) {
+            .humberger__menu__wrapper .header__top__right__auth {
+                position: relative !important;
+                z-index: 1001 !important;
+                overflow: visible !important;
+            }
+            .humberger__menu__wrapper .header__top__right__auth > div {
+                position: relative !important;
+                z-index: 1001 !important;
+                overflow: visible !important;
+            }
+            .humberger__menu__wrapper .auth-dropdown {
+                position: absolute !important;
+                top: 100% !important;
+                right: 0 !important;
+                left: auto !important;
+                z-index: 10000 !important;
+                min-width: 180px !important;
+            }
+            [dir="rtl"] .humberger__menu__wrapper .auth-dropdown {
+                right: auto !important;
+                left: 0 !important;
+            }
+        }
+        .auth-dropdown.show,
+        .auth-dropdown[style*="display: block"] {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        .header .container {
+            position: relative !important;
+            z-index: 999 !important;
+            overflow: visible !important;
         }
         .auth-dropdown li {
-            padding: 8px 15px;
+            padding: 8px 15px !important;
+            margin: 0 !important;
+            list-style: none !important;
+            white-space: normal !important;
         }
         .auth-dropdown li:hover {
-            background-color: #f5f5f5;
+            background-color: #f5f5f5 !important;
         }
         .auth-dropdown a, .auth-dropdown button {
-            display: block;
-            width: 100%;
-            text-align: left;
+            display: block !important;
+            width: 100% !important;
+            text-align: left !important;
+            color: #333 !important;
+            text-decoration: none !important;
+        }
+        .auth-dropdown a:hover, .auth-dropdown button:hover {
+            color: #1283ED !important;
+        }
+        .auth-dropdown span {
+            display: block !important;
+            width: 100% !important;
         }
         [dir="rtl"] .auth-dropdown {
-            right: auto;
-            left: 0;
+            right: auto !important;
+            left: 0 !important;
         }
         [dir="rtl"] .auth-dropdown a, [dir="rtl"] .auth-dropdown button {
-            text-align: right;
+            text-align: right !important;
         }
     </style>
     
@@ -220,7 +301,10 @@
             // Only prevent default for dropdown toggle (when user is logged in)
             $('.header__top__right__auth').on('click', 'a[href="#"]', function(e) {
                 e.preventDefault();
-                $(this).next('.auth-dropdown').toggle();
+                e.stopPropagation();
+                var dropdown = $(this).next('.auth-dropdown');
+                $('.auth-dropdown').not(dropdown).hide().removeClass('show');
+                dropdown.toggle().addClass('show');
             });
             
             // Allow normal link behavior for login link (when user is not logged in)
@@ -229,7 +313,7 @@
             // Close dropdown when clicking outside
             $(document).on('click', function(e) {
                 if (!$(e.target).closest('.header__top__right__auth').length) {
-                    $('.auth-dropdown').hide();
+                    $('.auth-dropdown').hide().removeClass('show');
                 }
             });
         });

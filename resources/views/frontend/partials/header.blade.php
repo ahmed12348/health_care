@@ -7,7 +7,7 @@
 <div class="humberger__menu__overlay"></div>
 <div class="humberger__menu__wrapper">
     <div class="humberger__menu__logo">
-        <a href="{{ route('frontend.home') }}"><img src="{{ asset('front/assets/img/logo.png') }}" alt=""></a>
+        <a href="{{ route('frontend.home') }}"><img src="{{ asset('front/assets/img/healthcare.png') }}" alt=""></a>
     </div>
     <div class="humberger__menu__cart">
         <ul>
@@ -69,11 +69,47 @@
         </div>
         <div class="header__top__right__auth">
             @auth
-                <a href="#"><i class="fa fa-user"></i> {{ auth()->user()->name }}</a>
+                <div style="position: relative; display: inline-block;">
+                    <a href="#" style="cursor: pointer;"><i class="fa fa-user"></i> {{ auth()->user()->name }}</a>
+                    <ul class="auth-dropdown">
+                        <li style="border-bottom: 1px solid #eee;">
+                            <span style="font-size: 12px; color: #666;">{{ auth()->user()->email }}</span>
+                        </li>
+                        <li style="border-bottom: 1px solid #eee;">
+                            <span style="font-size: 12px; color: #666;">{{ __t('role') }}: {{ auth()->user()->role }}</span>
+                        </li>
+                        @if(auth()->user()->role === 'admin')
+                            <li>
+                                <a href="{{ route('admin.dashboard') }}">{{ __t('admin_dashboard') }}</a>
+                            </li>
+                        @endif
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST" style="margin: 0;">
+                                @csrf
+                                <button type="submit">{{ __t('logout') }}</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
             @else
                 <a href="{{ route('login') }}"><i class="fa fa-user"></i> {{ __t('login') }}</a>
             @endauth
         </div>
+    </div>
+    <div class="humberger__menu__categories">
+        <div class="hero__categories__all">
+            <i class="fa fa-bars"></i>
+            <span>{{ __t('all_departments') }}</span>
+        </div>
+        <ul>
+            @php
+                $categoryRepo = app(\App\Repositories\CategoryRepository::class);
+                $allCategories = $categoryRepo->getAll();
+            @endphp
+            @foreach($allCategories as $cat)
+                <li><a href="{{ route('frontend.categories.show', $cat->id) }}">{{ $cat->name }}</a></li>
+            @endforeach
+        </ul>
     </div>
     <nav class="humberger__menu__nav mobile-menu">
         <ul>
@@ -153,22 +189,22 @@
                             @auth
                                 <div style="position: relative; display: inline-block;">
                                     <a href="#" style="cursor: pointer;"><i class="fa fa-user"></i> {{ auth()->user()->name }}</a>
-                                    <ul style="display: none; position: absolute; top: 100%; right: 0; background: white; border: 1px solid #ddd; border-radius: 4px; padding: 10px 0; margin-top: 5px; min-width: 150px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 1000;" class="auth-dropdown">
-                                        <li style="padding: 8px 15px; border-bottom: 1px solid #eee;">
+                                    <ul class="auth-dropdown">
+                                        <li style="border-bottom: 1px solid #eee;">
                                             <span style="font-size: 12px; color: #666;">{{ auth()->user()->email }}</span>
                                         </li>
-                                        <li style="padding: 8px 15px; border-bottom: 1px solid #eee;">
+                                        <li style="border-bottom: 1px solid #eee;">
                                             <span style="font-size: 12px; color: #666;">{{ __t('role') }}: {{ auth()->user()->role }}</span>
                                         </li>
                                         @if(auth()->user()->role === 'admin')
-                                            <li style="padding: 8px 15px;">
-                                                <a href="{{ route('admin.dashboard') }}" style="color: #333; text-decoration: none; display: block;">{{ __t('admin_dashboard') }}</a>
+                                            <li>
+                                                <a href="{{ route('admin.dashboard') }}">{{ __t('admin_dashboard') }}</a>
                                             </li>
                                         @endif
-                                        <li style="padding: 8px 15px;">
+                                        <li>
                                             <form action="{{ route('logout') }}" method="POST" style="margin: 0;">
                                                 @csrf
-                                                <button type="submit" style="background: none; border: none; color: #333; cursor: pointer; padding: 0; width: 100%; text-align: left;">{{ __t('logout') }}</button>
+                                                <button type="submit">{{ __t('logout') }}</button>
                                             </form>
                                         </li>
                                     </ul>
