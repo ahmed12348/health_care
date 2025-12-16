@@ -1110,3 +1110,37 @@
     margin-right: 5px;
 }
 
+/* Mobile RTL Improvements */
+@media only screen and (max-width: 767px) {
+    [dir="rtl"] .hero__search__phone {
+        float: right;
+    }
+    [dir="rtl"] .hero__search__form {
+        text-align: right;
+    }
+    [dir="rtl"] .hero__search__form input {
+        text-align: right;
+    }
+    [dir="rtl"] .featured__controls ul {
+        justify-content: center;
+    }
+    [dir="rtl"] .categories__item {
+        text-align: right;
+    }
+    [dir="rtl"] .featured__item__text {
+        text-align: right;
+    }
+    [dir="rtl"] .blog__item__text {
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    [dir="rtl"] .hero__text {
+        text-align: center;
+    }
+    [dir="rtl"] .section-title {
+        text-align: center;
+    }
+}
+

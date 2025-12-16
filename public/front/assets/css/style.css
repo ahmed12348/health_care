@@ -3564,3 +3564,103 @@ ol {
 		font-size: 24px;
 	}
 }
+
+/* Additional Mobile Responsive Improvements for Homepage */
+@media only screen and (max-width: 767px) {
+	.hero__item {
+		height: 250px !important;
+		min-height: 250px !important;
+	}
+	.hero__text {
+		padding: 20px !important;
+	}
+	.hero__text h1 {
+		font-size: 28px !important;
+	}
+	.hero__text p {
+		font-size: 14px !important;
+	}
+	.categories__item {
+		margin-bottom: 15px;
+	}
+	.categories__item h5 {
+		font-size: 14px;
+	}
+	.featured__item {
+		margin-bottom: 20px;
+	}
+	.featured__controls ul {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.featured__controls ul li {
+		margin: 5px;
+		padding: 8px 15px;
+		font-size: 13px;
+	}
+	.section-title h2 {
+		font-size: 24px;
+	}
+	.featured__item__text h6 {
+		font-size: 14px;
+	}
+	.featured__item__text h5 {
+		font-size: 16px;
+	}
+	.blog__item {
+		margin-bottom: 30px;
+	}
+	.blog__item__text h5 {
+		font-size: 16px;
+	}
+	.blog__item__text p {
+		font-size: 13px;
+	}
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.row {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	[class*="col-"] {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.hero__item {
+		height: 200px !important;
+		min-height: 200px !important;
+	}
+	.hero__text h1 {
+		font-size: 22px !important;
+	}
+	.hero__text p {
+		font-size: 12px !important;
+	}
+	.section-title h2 {
+		font-size: 20px;
+	}
+	.featured__item__text h6 {
+		font-size: 13px;
+	}
+	.featured__item__text h5 {
+		font-size: 14px;
+	}
+	.featured__controls ul li {
+		padding: 6px 12px;
+		font-size: 12px;
+	}
+	.categories__item h5 {
+		font-size: 12px;
+	}
+	.blog__item__text h5 {
+		font-size: 14px;
+	}
+	.blog__item__text p {
+		font-size: 12px;
+	}
+}
